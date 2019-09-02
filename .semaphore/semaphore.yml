@@ -19,7 +19,7 @@ blocks:
   - name: Static Analysis
     task:
       secrets:
-        - name: codecov
+        - name: bookworm-react-native
       jobs:
         - name: unit tests
           commands:

@@ -18,6 +18,8 @@ blocks:
 
   - name: Static Analysis
     task:
+      secrets:
+        - name: codecov
       jobs:
         - name: unit tests
           commands:

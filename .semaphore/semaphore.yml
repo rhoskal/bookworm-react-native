@@ -1,0 +1,28 @@
+version: v1.0
+name: Bookworm React Native
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Install dependencies
+    task:
+      jobs:
+        - name: install & cache
+          commands:
+            - checkout
+            - nvm use
+            - cache restore
+            - yarn install
+            - cache store
+
+  - name: Static Analysis
+    task:
+      jobs:
+        - name: unit tests
+          commands:
+            - checkout
+            - nvm use
+            - cache restore
+            - yarn test:ci
+            - bash <(curl -s https://codecov.io/bash)

@@ -1,0 +1,37 @@
+{
+  "env": {
+    "es6": "true",
+    "jest": "true",
+    "node": "true"
+  },
+  "extends": ["eslint:recommended", "plugin:jest/recommended", "plugin:react/recommended"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": "true"
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["import", "jest", "prettier", "react"],
+  "rules": {
+    "import/newline-after-import": 2,
+    "import/no-cycle": 2,
+    "import/order": [
+      1,
+      {
+        "groups": ["builtin", "external", ["internal", "parent", "sibling"], "index"],
+        "newlines-between": "always"
+      }
+    ],
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "react/prop-types": [2],
+    "react/sort-prop-types": [1]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}

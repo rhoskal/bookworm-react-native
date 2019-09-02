@@ -8,9 +8,10 @@ blocks:
   - name: Install dependencies
     task:
       jobs:
-        - name: Run some code
+        - name: install & cache
           commands:
             - checkout
+            - nvm use
             - cache restore
             - yarn install
             - cache store
@@ -18,9 +19,10 @@ blocks:
   - name: Static Analysis
     task:
       jobs:
-        - name: Unit tests
+        - name: unit tests
           commands:
             - checkout
+            - nvm use
             - cache restore
             - yarn test:ci
             - bash <(curl -s https://codecov.io/bash)

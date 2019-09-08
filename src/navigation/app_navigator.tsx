@@ -23,14 +23,19 @@ const BookStack = createStackNavigator(
           backgroundColor: Colors.white,
           borderBottomColor: Colors.white,
         },
-        title: "Books",
+        headerTitle: "Books",
+        headerTitleStyle: {
+          fontFamily: "Lato-Bold",
+          fontSize: 20,
+          color: Colors.textDark,
+        },
       }),
     },
     book_detail: {
       screen: BookDetail,
       navigationOptions: () => ({
         headerBackImage: (
-          <Image style={styles.icon} source={Icons.back_arrow} />
+          <Image style={styles.icon_arrow} source={Icons.back_arrow} />
         ),
         headerBackTitle: null,
         headerStyle: {
@@ -46,7 +51,7 @@ const BookStack = createStackNavigator(
 );
 
 const styles = StyleSheet.create({
-  icon: {
+  icon_arrow: {
     width: 25,
     height: 25,
     marginLeft: Layout.margin_lg,
@@ -55,16 +60,36 @@ const styles = StyleSheet.create({
   },
 });
 
+// https://reactnavigation.org/docs/en/drawer-navigator.html#drawericon
+type DrawerIconProps = {
+  focused: boolean;
+  tintColor: string;
+};
+
 const AppNavigator = createDrawerNavigator(
   {
-    Books: { screen: BookStack },
+    Books: {
+      screen: BookStack,
+      navigationOptions: () => ({
+        drawerIcon: ({ focused }: DrawerIconProps) => (
+          <Image
+            source={Icons.book}
+            style={{
+              width: 22,
+              height: 22,
+              tintColor: focused ? Colors.iconSelected : Colors.iconDefault,
+            }}
+          />
+        ),
+      }),
+    },
   },
   {
     contentComponent: CustomDrawer,
     contentOptions: {
       activeTintColor: Colors.tintColor,
       labelStyle: {
-        // fontFamily: "Lato-Regular",
+        fontFamily: "Lato-Regular",
         fontSize: 16,
         color: Colors.secondary,
       },

@@ -1,4 +1,5 @@
 {
-  "name": "bookworm",
-  "displayName": "Bookworm"
+  "description": "An app for bibliophiles",
+  "displayName": "Bookworm",
+  "name": "bookworm"
 }

@@ -46,6 +46,7 @@ exports[`[Screen] splash should match snapshot 1`] = `
         style={
           Object {
             "color": "white",
+            "fontFamily": "Lato-Bold",
             "fontSize": 30,
             "fontWeight": "bold",
           }

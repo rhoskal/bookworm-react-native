@@ -1,6 +1,7 @@
-import * as React from "react";
-import { Text } from "react-native";
+import React from "react";
 
-const App: React.FC<{}> = () => <Text>Hello World</Text>;
+import { BootstrapLoader } from "./navigation/bootstrap_loader";
 
-export default App;
+export default function App() {
+  return <BootstrapLoader />;
+}

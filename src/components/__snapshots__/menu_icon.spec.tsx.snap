@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuIcon should match snapshot 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      testID="menu-icon"
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/icons/nav_menu.png",
+          }
+        }
+        style={
+          Object {
+            "height": 23,
+            "marginLeft": 20,
+            "resizeMode": "contain",
+            "tintColor": "#386782",
+            "width": 23,
+          }
+        }
+      />
+    </TouchableOpacity>
+  </View>
+</View>
+`;

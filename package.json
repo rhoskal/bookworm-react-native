@@ -12,12 +12,18 @@
   },
   "dependencies": {
     "react": "16.8.6",
-    "react-native": "0.60.5"
+    "react-native": "0.60.5",
+    "react-native-gesture-handler": "^1.4.1",
+    "react-native-reanimated": "^1.2.0",
+    "react-native-screens": "^2.0.0-alpha.1",
+    "react-navigation": "^4.0.0",
+    "react-navigation-drawer": "^2.1.0",
+    "react-navigation-stack": "^1.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/runtime": "^7.5.5",
-    "@react-native-community/eslint-config": "^0.0.5",
+    "@testing-library/jest-native": "^3.0.2",
     "@testing-library/react-native": "4.0.8",
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
@@ -35,8 +41,5 @@
     "prettier": "^1.18.2",
     "react-test-renderer": "16.8.6",
     "typescript": "^3.6.2"
-  },
-  "jest": {
-    "preset": "react-native"
   }
 }

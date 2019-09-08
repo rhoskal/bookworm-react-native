@@ -1,0 +1,20 @@
+# https://facebook.github.io/react-native/blog/2018/05/07/using-typescript-with-react-native
+react-native init bookworm --template typescript
+
+setup and use nvm
+
+follow Android setup:
+https://facebook.github.io/react-native/docs/getting-started.html#android-development-environment
+react-native run-android
+
+if ios:
+ - sudo gem install cocoapods
+ - cd ios & pod install
+
+navigation is a big part of the app. probably want to spend some time there
+
+
+i18n? https://reactnavigation.org/docs/en/localization.html
+analytics? https://reactnavigation.org/docs/en/screen-tracking.html
+theme? https://reactnavigation.org/docs/en/themes.html
+build .ipa and .apk and try

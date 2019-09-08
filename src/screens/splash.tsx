@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
   },
   displayName: {
     color: "white",
+    fontFamily: "Lato-Bold",
     fontSize: 30,
     fontWeight: "bold",
   },

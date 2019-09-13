@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[component] Stars should match snapshot 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/icons/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 18,
+            "marginLeft": 0,
+            "tintColor": "#f4ca67",
+            "width": 18,
+          }
+        }
+      />
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/icons/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 18,
+            "marginLeft": 1.5,
+            "tintColor": "#f4ca67",
+            "width": 18,
+          }
+        }
+      />
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/icons/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 18,
+            "marginLeft": 1.5,
+            "tintColor": "#f4ca67",
+            "width": 18,
+          }
+        }
+      />
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/icons/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 18,
+            "marginLeft": 1.5,
+            "tintColor": "#f4ca67",
+            "width": 18,
+          }
+        }
+      />
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/icons/star.png",
+          }
+        }
+        style={
+          Object {
+            "height": 18,
+            "marginLeft": 1.5,
+            "tintColor": "#f4ca67",
+            "width": 18,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

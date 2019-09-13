@@ -4,7 +4,11 @@
     "jest": "true",
     "node": "true"
   },
-  "extends": ["eslint:recommended", "plugin:jest/recommended", "plugin:react/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:react/recommended"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
@@ -12,14 +16,38 @@
     },
     "sourceType": "module"
   },
-  "plugins": ["import", "jest", "prettier", "react"],
+  "plugins": ["graphql", "import", "jest", "prettier", "react"],
   "rules": {
+    "graphql/no-deprecated-fields": [
+      "error",
+      {
+        "env": "apollo"
+      }
+    ],
+    "graphql/required-fields": [
+      "error",
+      {
+        "env": "apollo",
+        "requiredFields": ["id"]
+      }
+    ],
+    "graphql/template-strings": [
+      "error",
+      {
+        "env": "apollo"
+      }
+    ],
     "import/newline-after-import": 2,
     "import/no-cycle": 2,
     "import/order": [
       1,
       {
-        "groups": ["builtin", "external", ["internal", "parent", "sibling"], "index"],
+        "groups": [
+          "builtin",
+          "external",
+          ["internal", "parent", "sibling"],
+          "index"
+        ],
         "newlines-between": "always"
       }
     ],

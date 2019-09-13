@@ -7549,21 +7549,21 @@ react-native@0.60.5:
     whatwg-fetch "^3.0.0"
 
 react-navigation-drawer@^2.1.1:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/react-navigation-drawer/-/react-navigation-drawer-2.1.2.tgz#08016dccb76dc8531f85b399955c448a9bcedb62"
-  integrity sha512-c/bcWBoyVsy71v4n6rddqmD4l/fyZy0FzhFbe9y7zN/ohxDFic0g1B1UxDSeYcYWJR743DnoIb+K1ZUsCueuSw==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-navigation-drawer/-/react-navigation-drawer-2.2.0.tgz#eb87a9abaf4b3836173e70e4802dcaeb5a8bfc86"
+  integrity sha512-w0TopTE6jXpoSpM9v6zSQPJROjATcOqW0dtAvFvDFCjTDmXjJ6FGxazBDJbF9lCYCbQXHZMSWC4rWXeGYFVUtg==
 
 react-navigation-stack@^1.5.4:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-1.5.5.tgz#0b3cd98b7845a51d9ce9d7d678e9e3b9ed010bc3"
-  integrity sha512-qMhOhmUmyPNfFGWMbwv5flrNVsFU4JZSBWnONSgVGK4KWGW8DbobXBi4i4sBAC9Kg8EqJK0qyWcxnkMJJtfMWA==
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-1.7.3.tgz#2dce28bdc80bbd2bf09755a6aa7200055a907504"
+  integrity sha512-wOt7T5NkIFInnFw+cxkUHUbNrXbPqascScia6azMWSdHhx+gvz3uW4Ubyw+2NULHcoshU53boUuQ8lUmUrJdhg==
   dependencies:
     prop-types "^15.7.2"
 
 react-navigation@^4.0.2:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-4.0.3.tgz#ba2cacb71db56e22ee50d774829ebc7fa95a0724"
-  integrity sha512-oASR5gHwd6se1Mw8AM4Ie8GicD5mKzRiYP6oaQujiQroQzQPij9sXxkRSqOscd/Kw1/Hf3htvBX3ZRPbOkWsfA==
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-4.0.4.tgz#afa43c7183891d38708cf57f1d4394fed1d4c2ad"
+  integrity sha512-MZeVkYkFTKZobhrXMV3Hgeg0HHeokCrYsbxActVfO0n6zfzm0/La6EiC2mIHiwOymvb1ZygyFf90vryLUMEBNA==
   dependencies:
     "@react-navigation/core" "^3.5.0"
     "@react-navigation/native" "^3.6.2"

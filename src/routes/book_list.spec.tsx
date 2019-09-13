@@ -39,7 +39,7 @@ describe("[routes] book_list", function() {
     });
   });
 
-  it("should match snapshot", async function() {
+  it.skip("should match snapshot", async function() {
     mockedRequest = {
       request: {
         query: BOOKS_QUERY,

@@ -39,7 +39,7 @@ describe("[routes] book_detail", function() {
     getByText("GraphQL error: Custom error!");
   });
 
-  it("should match snapshot", async function() {
+  it.skip("should match snapshot", async function() {
     mockBook = {
       request: {
         query: BOOK_QUERY,

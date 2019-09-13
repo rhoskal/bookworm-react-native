@@ -1,20 +1,20 @@
 import React from "react";
 import { Image, StyleSheet } from "react-native";
-import { createAppContainer, NavigationContainerProps } from "react-navigation";
+import { createAppContainer, NavigationScreenProps } from "react-navigation";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createStackNavigator } from "react-navigation-stack";
 
 import CustomDrawer from "./custom_drawer";
 import { MenuIcon } from "../components";
 import { Colors, Layout } from "../constants";
-import { BookDetail, BookList } from "../screens";
+import { BookDetail, BookList } from "../routes";
 import { Icons } from "../../assets";
 
 const BookStack = createStackNavigator(
   {
     book_list: {
       screen: BookList,
-      navigationOptions: ({ navigation }: NavigationContainerProps) => ({
+      navigationOptions: ({ navigation }: NavigationScreenProps): any => ({
         headerBackTitle: null,
         headerLeft: (
           <MenuIcon onPress={() => navigation && navigation.toggleDrawer()} />
@@ -33,7 +33,7 @@ const BookStack = createStackNavigator(
     },
     book_detail: {
       screen: BookDetail,
-      navigationOptions: () => ({
+      navigationOptions: (): any => ({
         headerBackImage: (
           <Image style={styles.icon_arrow} source={Icons.back_arrow} />
         ),

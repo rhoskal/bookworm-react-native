@@ -1,0 +1,403 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[routes] book_detail should match snapshot 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text>
+      Network error: No more mocked responses for the query: query bookDetail($id: ID!) {
+  book(id: $id) {
+    id
+    ...BookDetail
+    __typename
+  }
+}
+
+fragment BookDetail on Book {
+  id
+  authors
+  description
+  rating
+  thumbnail
+  title
+  __typename
+}
+, variables: {}
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      pointerEvents="box-none"
+      style={
+        Object {
+          "bottom": "100%",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "paddingBottom": 4,
+          "paddingEnd": 4,
+          "position": "absolute",
+          "width": "100%",
+        }
+      }
+    >
+      <TouchableWithoutFeedback
+        hitSlop={
+          Object {
+            "bottom": 4,
+            "left": 4,
+            "right": 4,
+            "top": 4,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(250, 186, 48, 0.95)",
+              },
+              Object {
+                "borderRadius": 14,
+                "height": 28,
+                "justifyContent": "center",
+                "paddingHorizontal": 12,
+              },
+            ]
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "rgba(255, 255, 255, 1)",
+                "fontSize": 12,
+                "includeFontPadding": false,
+                "lineHeight": 16,
+              }
+            }
+          >
+            Dismiss All
+          </Text>
+        </View>
+      </TouchableWithoutFeedback>
+    </View>
+    <RCTScrollView
+      data={
+        Array [
+          Object {
+            "category": "Warning: An update to ﻿%s inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://fb.me/react-wrap-tests-with-act﻿%s",
+            "warnings": Array [
+              YellowBoxWarning {
+                "message": Object {
+                  "content": "Warning: An update to \\"BookDetail\\" inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://fb.me/react-wrap-tests-with-act\\"
+    in BookDetail
+    in ApolloProvider (created by MockedProvider)
+    in MockedProvider
+    in View (created by View)
+    in View (created by AppContainer)
+    in View (created by View)
+    in View (created by AppContainer)
+    in AppContainer (at src/index.js:24)\\"",
+                  "substitutions": Array [
+                    Object {
+                      "length": 12,
+                      "offset": 22,
+                    },
+                    Object {
+                      "length": 269,
+                      "offset": 380,
+                    },
+                  ],
+                },
+                "stack": Array [
+                  Object {
+                    "arguments": Array [],
+                    "column": 32,
+                    "file": "/Users/hansy/Documents/Code/bookworm-apps/react-native/node_modules/react-test-renderer/cjs/react-test-renderer.development.js",
+                    "lineNumber": 102,
+                    "methodName": "warningWithoutStack",
+                  },
+                  Object {
+                    "arguments": Array [],
+                    "column": 7,
+                    "file": "/Users/hansy/Documents/Code/bookworm-apps/react-native/node_modules/react-test-renderer/cjs/react-test-renderer.development.js",
+                    "lineNumber": 11949,
+                    "methodName": "warnIfNotCurrentlyBatchingInDev",
+                  },
+                  Object {
+                    "arguments": Array [],
+                    "column": 9,
+                    "file": "/Users/hansy/Documents/Code/bookworm-apps/react-native/node_modules/react-test-renderer/cjs/react-test-renderer.development.js",
+                    "lineNumber": 5694,
+                    "methodName": "dispatchAction",
+                  },
+                  Object {
+                    "arguments": Array [],
+                    "column": 17,
+                    "file": "/Users/hansy/Documents/Code/bookworm-apps/react-native/node_modules/@apollo/react-hooks/lib/react-hooks.cjs.js",
+                    "lineNumber": 326,
+                    "methodName": "Object.error",
+                  },
+                  Object {
+                    "arguments": Array [],
+                    "column": 18,
+                    "file": "/Users/hansy/Documents/Code/bookworm-apps/react-native/node_modules/zen-observable/lib/Observable.js",
+                    "lineNumber": 134,
+                    "methodName": "notifySubscription",
+                  },
+                ],
+                "symbolicated": Object {
+                  "error": null,
+                  "stack": null,
+                  "status": "NONE",
+                },
+              },
+              YellowBoxWarning {
+                "message": Object {
+                  "content": "Warning: An update to \\"BookDetail\\" inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://fb.me/react-wrap-tests-with-act\\"
+    in BookDetail
+    in ApolloProvider (created by MockedProvider)
+    in MockedProvider
+    in View (created by View)
+    in View (created by AppContainer)
+    in View (created by View)
+    in View (created by AppContainer)
+    in AppContainer (at src/index.js:24)\\"",
+                  "substitutions": Array [
+                    Object {
+                      "length": 12,
+                      "offset": 22,
+                    },
+                    Object {
+                      "length": 269,
+                      "offset": 380,
+                    },
+                  ],
+                },
+                "stack": Array [
+                  Object {
+                    "arguments": Array [],
+                    "column": 32,
+                    "file": "/Users/hansy/Documents/Code/bookworm-apps/react-native/node_modules/react-test-renderer/cjs/react-test-renderer.development.js",
+                    "lineNumber": 102,
+                    "methodName": "warningWithoutStack",
+                  },
+                  Object {
+                    "arguments": Array [],
+                    "column": 7,
+                    "file": "/Users/hansy/Documents/Code/bookworm-apps/react-native/node_modules/react-test-renderer/cjs/react-test-renderer.development.js",
+                    "lineNumber": 11949,
+                    "methodName": "warnIfNotCurrentlyBatchingInDev",
+                  },
+                  Object {
+                    "arguments": Array [],
+                    "column": 9,
+                    "file": "/Users/hansy/Documents/Code/bookworm-apps/react-native/node_modules/react-test-renderer/cjs/react-test-renderer.development.js",
+                    "lineNumber": 5694,
+                    "methodName": "dispatchAction",
+                  },
+                  Object {
+                    "arguments": Array [],
+                    "column": 17,
+                    "file": "/Users/hansy/Documents/Code/bookworm-apps/react-native/node_modules/@apollo/react-hooks/lib/react-hooks.cjs.js",
+                    "lineNumber": 326,
+                    "methodName": "Object.error",
+                  },
+                  Object {
+                    "arguments": Array [],
+                    "column": 18,
+                    "file": "/Users/hansy/Documents/Code/bookworm-apps/react-native/node_modules/zen-observable/lib/Observable.js",
+                    "lineNumber": 134,
+                    "methodName": "notifySubscription",
+                  },
+                ],
+                "symbolicated": Object {
+                  "error": null,
+                  "stack": null,
+                  "status": "NONE",
+                },
+              },
+            ],
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      removeClippedSubviews={false}
+      scrollEnabled={false}
+      scrollEventThrottle={50}
+      scrollsToTop={false}
+      stickyHeaderIndices={Array []}
+      style={
+        Object {
+          "height": 48.5,
+        }
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          style={null}
+        >
+          <TouchableWithoutFeedback>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(250, 186, 48, 0.95)",
+                  },
+                  Object {
+                    "height": 48,
+                    "justifyContent": "center",
+                    "marginTop": 0.5,
+                    "paddingHorizontal": 12,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "rgba(255, 255, 255, 0.5)",
+                      "fontSize": 14,
+                      "includeFontPadding": false,
+                      "lineHeight": 18,
+                    }
+                  }
+                >
+                  (2) 
+                </Text>
+                <Text
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "rgba(255, 255, 255, 1)",
+                      "flex": 1,
+                      "fontSize": 14,
+                      "includeFontPadding": false,
+                      "lineHeight": 18,
+                    }
+                  }
+                >
+                  <Text>
+                    Warning: An update to 
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(255, 255, 255, 0.6)",
+                      }
+                    }
+                  >
+                    "BookDetail"
+                  </Text>
+                  <Text>
+                     inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() =&gt; {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://fb.me/react-wrap-tests-with-act
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(255, 255, 255, 0.6)",
+                      }
+                    }
+                  >
+                    "
+    in BookDetail
+    in ApolloProvider (created by MockedProvider)
+    in MockedProvider
+    in View (created by View)
+    in View (created by AppContainer)
+    in View (created by View)
+    in View (created by AppContainer)
+    in AppContainer (at src/index.js:24)"
+                  </Text>
+                </Text>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
+        </View>
+      </View>
+    </RCTScrollView>
+    <SafeAreaView
+      style={
+        Object {
+          "backgroundColor": "rgba(250, 186, 48, 0.95)",
+          "marginTop": 0.5,
+        }
+      }
+    />
+  </View>
+</View>
+`;

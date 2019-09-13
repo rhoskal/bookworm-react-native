@@ -3,11 +3,20 @@ module.exports = {
   collectCoverageFrom: [
     "src/**/*.{ts,tsx}",
     "!src/**/index.ts",
+    "!src/**/types.ts",
     "!src/constants/*",
     "!src/navigation/*",
     "!**/node_modules/**",
   ],
   coverageDirectory: "<rootDir>/coverage",
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60,
+    },
+  },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
   preset: "@testing-library/react-native",
   setupFiles: ["./jest_setup.js"],

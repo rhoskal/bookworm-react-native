@@ -1,0 +1,6 @@
+projects:
+  bookworm-react-native:
+    schemaPath: schema.json
+    extensions:
+      endpoints:
+        default: 'https://bookworm.hansjhoffman.dev/graphql'

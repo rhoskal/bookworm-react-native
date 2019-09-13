@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Splash } from "../screens";
+import { Splash } from "../routes";
 import AppContainer from "./app_navigator";
 
 export function BootstrapLoader() {

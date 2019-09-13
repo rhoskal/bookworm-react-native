@@ -2,3 +2,4 @@
 android/*
 ios/*
 coverage/*
+src/types.ts

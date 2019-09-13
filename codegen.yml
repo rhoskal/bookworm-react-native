@@ -1,0 +1,7 @@
+overwrite: true
+schema: "https://bookworm.hansjhoffman.dev/graphql"
+generates:
+  ./src/types.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"

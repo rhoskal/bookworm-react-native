@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[Screen] book_detail should match snapshot 1`] = `
+exports[`[component] Error should match snapshot 1`] = `
 <View
   pointerEvents="box-none"
   style={
@@ -18,11 +18,9 @@ exports[`[Screen] book_detail should match snapshot 1`] = `
       }
     }
   >
-    <View>
-      <Text>
-        Unable to find book
-      </Text>
-    </View>
+    <Text>
+      Error :(
+    </Text>
   </View>
 </View>
 `;

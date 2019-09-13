@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[Screen] book_list should match snapshot 1`] = `
+exports[`[component] Loading should match snapshot 1`] = `
 <View
   pointerEvents="box-none"
   style={
@@ -18,14 +18,9 @@ exports[`[Screen] book_list should match snapshot 1`] = `
       }
     }
   >
-    <View>
-      <Text>
-        Book 1
-      </Text>
-      <Text>
-        Book 2
-      </Text>
-    </View>
+    <Text>
+      Loading...
+    </Text>
   </View>
 </View>
 `;

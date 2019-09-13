@@ -7,7 +7,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import CustomDrawer from "./custom_drawer";
 import { MenuIcon } from "../components";
 import { Colors, Layout } from "../constants";
-import { BookDetail, BookList } from "../screens";
+import { BookDetail, BookList } from "../routes";
 import { Icons } from "../../assets";
 
 const BookStack = createStackNavigator(

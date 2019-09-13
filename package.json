@@ -10,7 +10,7 @@
     "schema": "graphql get-schema && yarn run codegen",
     "start": "react-native start",
     "test": "jest",
-    "test:ci": "jest --coverage"
+    "test:ci": "jest --ci --coverage"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.0",

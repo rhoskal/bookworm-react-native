@@ -1,6 +1,7 @@
 # OSX
 #
 .DS_Store
+*.swp
 
 # Xcode
 #
@@ -62,7 +63,5 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 
-# Odds
-.DS_Store
-*.swp
+# Project
 coverage/*

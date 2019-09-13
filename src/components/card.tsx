@@ -18,7 +18,7 @@ export function Card({ book, onPress }: Props) {
         <Image
           defaultSource={Images.placeholder}
           resizeMode="contain"
-          source={{ uri: book.thumbnail }}
+          source={{ uri: book.thumbnail ? book.thumbnail : '' }}
           style={styles.thumbnail}
         />
       </View>

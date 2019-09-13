@@ -1,5 +1,5 @@
 import React from "react";
-import { render, wait, waitForElement } from "@testing-library/react-native";
+import { render, wait } from "@testing-library/react-native";
 import { MockedProvider } from "@apollo/react-testing";
 import { GraphQLError } from "graphql";
 

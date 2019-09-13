@@ -1,11 +1,11 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
 
-import { BookDetail } from "./book_detail";
+import { Loading } from "./loading";
 
-describe("[Screen] book_detail", function() {
+describe("[component] Loading", function() {
   it("should match snapshot", function() {
-    const { baseElement } = render(<BookDetail />);
+    const { baseElement } = render(<Loading />);
 
     expect(baseElement).toMatchSnapshot();
   });

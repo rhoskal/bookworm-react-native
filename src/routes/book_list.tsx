@@ -4,7 +4,6 @@ import { NavigationContainerProps } from "react-navigation";
 import gql from "graphql-tag";
 import { useQuery } from "@apollo/react-hooks";
 
-import { BOOK_FRAGMENT } from "./book_detail";
 import { Card, Error, Loading } from "../components";
 import { Colors, Layout } from "../constants";
 import { Book } from "../types";
@@ -13,10 +12,12 @@ export const BOOKS_QUERY = gql`
   query bookList {
     books {
       id
-      ...BookDetail
+      authors
+      rating
+      thumbnail
+      title
     }
   }
-  ${BOOK_FRAGMENT}
 `;
 
 export function BookList({ navigation }: NavigationContainerProps) {

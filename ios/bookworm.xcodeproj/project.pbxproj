@@ -13,15 +13,14 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		191D396A6AD4DF3FFDDCF680 /* libPods-bookworm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC857861D79501106BAF301 /* libPods-bookworm.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* bookwormTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* bookwormTests.m */; };
-		983D1D3AF698FF3A4985ED37 /* libPods-bookworm-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B759D1049883524F766E6E4 /* libPods-bookworm-tvOSTests.a */; };
-		D5264551B392443D04E972BD /* libPods-bookworm-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B17AE1B701036CF4A238B8DB /* libPods-bookworm-tvOS.a */; };
-		F1CB111704708B6263A1271C /* libPods-bookwormTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F61934927C05BD60D5F24FF2 /* libPods-bookwormTests.a */; };
 		71C4819C5E934E38AD4D7811 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BCA5411E8A8479890322D98 /* Lato-Bold.ttf */; };
 		7FB7B50792934AC788A665C2 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3A8AC561A9849EAAB3469A6 /* Lato-Light.ttf */; };
+		983D1D3AF698FF3A4985ED37 /* libPods-bookworm-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B759D1049883524F766E6E4 /* libPods-bookworm-tvOSTests.a */; };
+		D5264551B392443D04E972BD /* libPods-bookworm-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B17AE1B701036CF4A238B8DB /* libPods-bookworm-tvOS.a */; };
 		F00A93C114634574AF91E205 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB42BE5015420EA32F5451 /* Lato-Regular.ttf */; };
+		F1CB111704708B6263A1271C /* libPods-bookwormTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F61934927C05BD60D5F24FF2 /* libPods-bookwormTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,9 @@
 		19B1FA54A1E3782A90FA1C29 /* Pods-bookworm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookworm.release.xcconfig"; path = "Target Support Files/Pods-bookworm/Pods-bookworm.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* bookworm-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bookworm-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* bookworm-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bookworm-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DAB42BE5015420EA32F5451 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
 		4F9E3606AC41E642F48DF9E4 /* Pods-bookworm-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookworm-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-bookworm-tvOS/Pods-bookworm-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5BCA5411E8A8479890322D98 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
 		6DE6E0D0000EB12874D314F0 /* Pods-bookworm-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookworm-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-bookworm-tvOSTests/Pods-bookworm-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B759D1049883524F766E6E4 /* libPods-bookworm-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bookworm-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FFC7DB8F727313129D8E3A9 /* Pods-bookworm-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookworm-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-bookworm-tvOSTests/Pods-bookworm-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,10 +69,8 @@
 		CCAA02704AF4567611B3805D /* Pods-bookwormTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookwormTests.debug.xcconfig"; path = "Target Support Files/Pods-bookwormTests/Pods-bookwormTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F3A8AC561A9849EAAB3469A6 /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../assets/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
 		F61934927C05BD60D5F24FF2 /* libPods-bookwormTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bookwormTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BCA5411E8A8479890322D98 /* Lato-Bold.ttf */ = {isa = PBXFileReference; name = "Lato-Bold.ttf"; path = "../assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F3A8AC561A9849EAAB3469A6 /* Lato-Light.ttf */ = {isa = PBXFileReference; name = "Lato-Light.ttf"; path = "../assets/fonts/Lato-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4DAB42BE5015420EA32F5451 /* Lato-Regular.ttf */ = {isa = PBXFileReference; name = "Lato-Regular.ttf"; path = "../assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +187,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C92AB46D12E14157ACD1211A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BCA5411E8A8479890322D98 /* Lato-Bold.ttf */,
+				F3A8AC561A9849EAAB3469A6 /* Lato-Light.ttf */,
+				4DAB42BE5015420EA32F5451 /* Lato-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		CEC1F245A18DEEC40CBDABB7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,20 +209,8 @@
 				CCAA02704AF4567611B3805D /* Pods-bookwormTests.debug.xcconfig */,
 				B24286FDD94AF056E7FFE699 /* Pods-bookwormTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		C92AB46D12E14157ACD1211A /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				5BCA5411E8A8479890322D98 /* Lato-Bold.ttf */,
-				F3A8AC561A9849EAAB3469A6 /* Lato-Light.ttf */,
-				4DAB42BE5015420EA32F5451 /* Lato-Regular.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -325,6 +322,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -365,7 +363,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

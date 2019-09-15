@@ -1,10 +1,17 @@
 import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
-import { Images } from "../../assets";
-import { Colors, Layout } from "../constants";
 import { Stars } from "./stars";
+import { Colors, Layout } from "../constants";
 import { Book } from "../types";
+import { Images } from "../../assets";
 
 type Props = {
   book: Book;
@@ -13,12 +20,12 @@ type Props = {
 
 export function Card({ book, onPress }: Props) {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity style={styles.card} onPress={onPress}>
       <View style={styles.thumbnailContainer}>
         <Image
           defaultSource={Images.placeholder}
           resizeMode="contain"
-          source={{ uri: book.thumbnail ? book.thumbnail : '' }}
+          source={{ uri: book.thumbnail ? book.thumbnail : Images.placeholder }}
           style={styles.thumbnail}
         />
       </View>
@@ -48,32 +55,39 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: Layout.margin_sm,
   },
-  container: {
-    position: "relative",
+  card: {
     backgroundColor: Colors.white,
+    borderRadius: Layout.cardRadius,
     height: 200,
-    width: (Layout.screen.width - Layout.margin_md * 3) / 2,
     marginBottom: 100,
     padding: Layout.margin_md,
-    borderRadius: Layout.cardRadius,
-    shadowColor: Colors.shadow,
-    shadowOffset: {
-      width: 7,
-      height: 7,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: Layout.cardRadius,
-    elevation: 1,
+    position: "relative",
+    width: (Layout.screen.width - Layout.margin_md * 3) / 2,
+    ...Platform.select({
+      android: {
+        elevation: 5,
+      },
+      ios: {
+        shadowColor: Colors.shadow,
+        shadowOffset: {
+          height: 7,
+          width: 0,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: Layout.cardRadius,
+      },
+    }),
   },
   infoContainer: {
     paddingTop: 90,
   },
   thumbnail: {
+    borderRadius: 15,
+    height: 200,
+    overflow: "hidden",
     position: "absolute",
     top: -100,
     width: 100,
-    height: 200,
-    borderRadius: 15,
   },
   thumbnailContainer: {
     alignItems: "center",

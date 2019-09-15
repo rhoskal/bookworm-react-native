@@ -24,7 +24,6 @@ exports[`[component] Card should match snapshot 1`] = `
         Object {
           "backgroundColor": "#fff",
           "borderRadius": 8,
-          "elevation": 1,
           "height": 200,
           "marginBottom": 100,
           "padding": 15,
@@ -32,7 +31,7 @@ exports[`[component] Card should match snapshot 1`] = `
           "shadowColor": "#000",
           "shadowOffset": Object {
             "height": 7,
-            "width": 7,
+            "width": 0,
           },
           "shadowOpacity": 0.1,
           "shadowRadius": 8,
@@ -63,6 +62,7 @@ exports[`[component] Card should match snapshot 1`] = `
             Object {
               "borderRadius": 15,
               "height": 200,
+              "overflow": "hidden",
               "position": "absolute",
               "top": -100,
               "width": 100,

@@ -1,12 +1,17 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
-import { DrawerNavigatorItems } from "react-navigation-drawer";
+import {
+  DrawerNavigatorItems,
+  DrawerContentComponentProps,
+} from "react-navigation-drawer";
 import SafeAreaView from "react-native-safe-area-view";
 
-import { Images } from "../../assets";
 import { Layout } from "../constants";
+import { Images } from "../../assets";
 
-export default function CustomDrawerContent(props: any) {
+export default function CustomDrawerContent(
+  props: DrawerContentComponentProps,
+) {
   return (
     <SafeAreaView
       style={styles.container}

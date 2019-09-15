@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Platform, StyleSheet, Text, View } from "react-native";
 import { NavigationContainerProps } from "react-navigation";
 import gql from "graphql-tag";
 import { useQuery } from "@apollo/react-hooks";
@@ -9,25 +9,17 @@ import { Colors, Layout } from "../constants";
 import { Book } from "../types";
 import { Images } from "../../assets";
 
-export const BOOK_FRAGMENT = gql`
-  fragment BookDetail on Book {
-    id
-    authors
-    description
-    rating
-    thumbnail
-    title
-  }
-`;
-
 export const BOOK_QUERY = gql`
   query bookDetail($id: ID!) {
     book(id: $id) {
       id
-      ...BookDetail
+      authors
+      description
+      rating
+      thumbnail
+      title
     }
   }
-  ${BOOK_FRAGMENT}
 `;
 
 export function BookDetail({ navigation }: NavigationContainerProps) {
@@ -77,9 +69,9 @@ const styles = StyleSheet.create({
     color: Colors.textMedium,
     fontFamily: "Lato-Regular",
     fontSize: 16,
-    textAlign: "justify",
     lineHeight: 25,
     marginTop: Layout.margin_sm,
+    textAlign: "justify",
   },
   bookTitleText: {
     color: Colors.textDark,
@@ -88,21 +80,27 @@ const styles = StyleSheet.create({
     marginBottom: Layout.margin_sm,
   },
   card: {
-    position: "relative",
+    alignItems: "center",
     backgroundColor: Colors.white,
+    borderRadius: Layout.cardRadius,
     height: Layout.screen.height * 0.5,
     marginHorizontal: Layout.margin_xl,
     padding: Layout.margin_lg,
-    borderRadius: Layout.cardRadius,
-    shadowColor: Colors.shadow,
-    shadowOffset: {
-      width: 7,
-      height: 7,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: Layout.cardRadius,
-    elevation: 1,
-    alignItems: "center",
+    position: "relative",
+    ...Platform.select({
+      android: {
+        elevation: 5,
+      },
+      ios: {
+        shadowColor: Colors.shadow,
+        shadowOffset: {
+          height: 7,
+          width: 0,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: Layout.cardRadius,
+      },
+    }),
   },
   container: {
     flex: 1,
@@ -110,8 +108,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   icon: {
-    width: 25,
     height: 25,
+    width: 25,
     marginLeft: Layout.margin_lg,
     resizeMode: "contain",
     tintColor: Colors.iconSelected,
@@ -120,10 +118,11 @@ const styles = StyleSheet.create({
     paddingTop: 150,
   },
   thumbnail: {
+    borderRadius: 15,
+    height: 300,
+    overflow: "hidden",
     position: "absolute",
     top: -150,
     width: 200,
-    height: 300,
-    borderRadius: 15,
   },
 });

@@ -10,7 +10,8 @@
     "schema": "graphql get-schema && yarn run codegen",
     "start": "react-native start",
     "test": "jest",
-    "test:ci": "jest --ci --coverage"
+    "test:ci": "jest --ci --coverage",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.0",
@@ -38,7 +39,6 @@
     "@graphql-codegen/introspection": "1.7.0",
     "@graphql-codegen/typescript": "1.7.0",
     "@graphql-codegen/typescript-operations": "1.7.0",
-    "@graphql-codegen/typescript-react-apollo": "1.7.0",
     "@testing-library/jest-native": "^3.0.2",
     "@testing-library/react-native": "4.0.8",
     "@types/graphql": "^14.5.0",
@@ -49,6 +49,7 @@
     "apollo-link": "^1.2.13",
     "babel-eslint": "10.0.2",
     "babel-jest": "^24.9.0",
+    "babel-plugin-jsx-remove-data-test-id": "^2.0.0",
     "eslint": "^6.3.0",
     "eslint-plugin-graphql": "^3.0.3",
     "eslint-plugin-import": "2.18.2",

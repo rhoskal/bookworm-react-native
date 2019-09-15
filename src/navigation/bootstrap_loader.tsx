@@ -1,12 +1,12 @@
 import React from "react";
 
-import { Splash } from "../routes";
 import AppContainer from "./app_navigator";
+import { Splash } from "../routes";
 
 export function BootstrapLoader() {
   const [isReady, setIsReady] = React.useState(false);
 
-  React.useEffect(function() {
+  React.useEffect(() => {
     _initialize();
   }, []);
 

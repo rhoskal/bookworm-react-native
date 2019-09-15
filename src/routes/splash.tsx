@@ -1,9 +1,9 @@
 import React from "react";
 import { Image, StatusBar, StyleSheet, Text, View } from "react-native";
 
-import { Images } from "../../assets";
-import { displayName } from "../../app.json";
 import { Colors } from "../constants";
+import { displayName } from "../../app.json";
+import { Images } from "../../assets";
 
 export function Splash() {
   React.useEffect(() => {
@@ -16,7 +16,7 @@ export function Splash() {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.logo} source={Images.logo} resizeMode="contain" />
+      <Image resizeMode="contain" source={Images.logo} style={styles.logo} />
       <Text style={styles.displayName}>{displayName}</Text>
     </View>
   );

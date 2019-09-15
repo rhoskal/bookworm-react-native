@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet } from "react-native";
+import { Image, Platform, StyleSheet } from "react-native";
 import { createAppContainer, NavigationScreenProps } from "react-navigation";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createStackNavigator } from "react-navigation-stack";
@@ -20,14 +20,33 @@ const BookStack = createStackNavigator(
           <MenuIcon onPress={() => navigation && navigation.toggleDrawer()} />
         ),
         headerStyle: {
-          backgroundColor: Colors.white,
-          borderBottomColor: Colors.white,
+          ...Platform.select({
+            android: {
+              elevation: 0,
+            },
+            ios: {
+              borderBottomWidth: 0,
+            },
+          }),
         },
         headerTitle: "Books",
         headerTitleStyle: {
+          color: Colors.textDark,
           fontFamily: "Lato-Bold",
           fontSize: 20,
-          color: Colors.textDark,
+          ...Platform.select({
+            android: {
+              flex: 1,
+              textAlign: "center",
+            },
+          }),
+        },
+        headerTitleContainerStyle: {
+          ...Platform.select({
+            android: {
+              left: Layout.margin_lg,
+            },
+          }),
         },
       }),
     },
@@ -39,8 +58,14 @@ const BookStack = createStackNavigator(
         ),
         headerBackTitle: null,
         headerStyle: {
-          backgroundColor: Colors.white,
-          borderBottomColor: Colors.white,
+          ...Platform.select({
+            android: {
+              elevation: 0,
+            },
+            ios: {
+              borderBottomWidth: 0,
+            },
+          }),
         },
       }),
     },
@@ -52,8 +77,8 @@ const BookStack = createStackNavigator(
 
 const styles = StyleSheet.create({
   icon_arrow: {
-    width: 25,
     height: 25,
+    width: 25,
     marginLeft: Layout.margin_lg,
     resizeMode: "contain",
     tintColor: Colors.iconSelected,

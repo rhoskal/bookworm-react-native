@@ -1,5 +1,5 @@
 import React from "react";
-import { render, wait } from "@testing-library/react-native";
+import { render, wait, waitForElement } from "@testing-library/react-native";
 import { MockedProvider } from "@apollo/react-testing";
 import { GraphQLError } from "graphql";
 
@@ -10,7 +10,7 @@ describe("[routes] book_detail", function() {
 
   it("should handle loading state", function() {
     const { getByText } = render(
-      <MockedProvider mocks={[]}>
+      <MockedProvider mocks={[]} addTypename={false}>
         <BookDetail />
       </MockedProvider>,
     );
@@ -29,17 +29,15 @@ describe("[routes] book_detail", function() {
     };
 
     const { getByText } = render(
-      <MockedProvider mocks={[mockBook]}>
+      <MockedProvider mocks={[mockBook]} addTypename={false}>
         <BookDetail />
       </MockedProvider>,
     );
 
-    await wait();
-
-    getByText("GraphQL error: Custom error!");
+    await waitForElement(() => getByText("GraphQL error: Custom error!"));
   });
 
-  it.skip("should match snapshot", async function() {
+  it("should match snapshot", async function() {
     mockBook = {
       request: {
         query: BOOK_QUERY,
@@ -61,7 +59,6 @@ describe("[routes] book_detail", function() {
             rating: 3,
             thumbnail: "https://images-na.ssl-image.jpg",
             title: "Atlas Shrugged",
-            __typename: "Book",
           },
         },
       },
@@ -77,13 +74,11 @@ describe("[routes] book_detail", function() {
     };
 
     const { baseElement } = render(
-      <MockedProvider mocks={[mockBook]} addTypename>
+      <MockedProvider mocks={[mockBook]} addTypename={false}>
         <BookDetail {...withNav} />
       </MockedProvider>,
     );
 
-    await wait(function() {
-      return expect(baseElement).toMatchSnapshot();
-    });
+    await wait(() => expect(baseElement).toMatchSnapshot());
   });
 });

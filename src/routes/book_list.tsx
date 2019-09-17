@@ -1,6 +1,6 @@
 import React from "react";
 import { FlatList, StyleSheet, View } from "react-native";
-import { NavigationContainerProps } from "react-navigation";
+import { NavigationScreenProp } from "react-navigation";
 import gql from "graphql-tag";
 import { useQuery } from "@apollo/react-hooks";
 
@@ -20,7 +20,11 @@ export const BOOKS_QUERY = gql`
   }
 `;
 
-export function BookList({ navigation }: NavigationContainerProps) {
+type Props = {
+  navigation: NavigationScreenProp<{}>;
+};
+
+export function BookList({ navigation }: Props) {
   const { data, error, loading } = useQuery(BOOKS_QUERY);
 
   if (loading) return <Loading />;
@@ -66,17 +70,17 @@ const styles = StyleSheet.create({
     paddingTop: 100,
   },
   centered: {
-    justifyContent: "center",
     alignItems: "center",
+    justifyContent: "center",
     padding: Layout.margin_lg,
   },
   container: {
-    flex: 1,
     backgroundColor: Colors.white,
+    flex: 1,
   },
   menuIcon: {
-    width: 23,
     height: 23,
+    width: 23,
     marginLeft: Layout.margin_lg,
     resizeMode: "contain",
     tintColor: Colors.iconSelected,

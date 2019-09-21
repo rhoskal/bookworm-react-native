@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     width: (Layout.screen.width - Layout.margin_md * 3) / 2,
     ...Platform.select({
       android: {
-        elevation: 5,
+        elevation: 2,
       },
       ios: {
         shadowColor: Colors.shadow,

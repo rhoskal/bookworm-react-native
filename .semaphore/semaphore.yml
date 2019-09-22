@@ -16,7 +16,7 @@ blocks:
       - name: Release 🚀
         commands:
           - wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
-          - unzip -q sdk-tools-linux-4333796.zip -d android_sdk
+          - unzip -q sdk-tools-linux-4333796.zip -d android-sdk
           - yes | android_sdk/tools/bin/sdkmanager --licenses
           - yes | android_sdk/tools/bin/sdkmanager --update
           - checkout
@@ -26,7 +26,7 @@ blocks:
           - yarn jetify
           - cd android
           - gem install bundler
-          - bundle update && bundle install
+          - bundle update && bundle install --quiet
           - bundle exec fastlane release
 
 # blocks:

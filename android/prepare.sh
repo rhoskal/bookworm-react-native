@@ -6,5 +6,3 @@ printf "[+] Installing Fastlane...\n"
 cd android
 gem install bundler
 bundle update && bundle install
-printf "[+] Building release...\n"
-bundle exec fastlane release

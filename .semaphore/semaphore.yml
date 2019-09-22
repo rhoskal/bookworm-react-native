@@ -20,7 +20,8 @@ blocks:
           - sem-version ruby 2.6.4
           - cache restore
           - yarn jetify
-          - ./semaphore/android-build.sh
+          - bash ./android/prepare.sh
+          - bundle exec fastlane release
 
 # blocks:
 #   - name: "Install dependencies"

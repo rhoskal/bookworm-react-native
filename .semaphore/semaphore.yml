@@ -13,9 +13,11 @@ blocks:
       - name: Release 🚀
         commands:
           - checkout
+          - nvm use
           - sem-version ruby 2.6.4
-          - ruby --version
-          - cd android && bundle update && bundle install
+          - cache restore
+          - cd android && gem install bundler && bundle update && bundle install
+          - yarn jetify
           - bundle exec fastlane release
 
 # blocks:

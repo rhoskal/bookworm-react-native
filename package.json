@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build:android": "cd android && bundle exec fastlane deploy",
-    "build:ios": "cd ios && bundle exec fastlane deploy",
+    "build:android": "cd android && bundle exec fastlane release",
+    "build:ios": "cd ios && bundle exec fastlane release",
     "codegen": "graphql-codegen --config codegen.yml",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "lint": "eslint 'src/**/*.{ts,tsx}'",

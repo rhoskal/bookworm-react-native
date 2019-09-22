@@ -16,14 +16,14 @@
 default_platform(:android)
 
 platform :android do
-  desc "Runs all the tests"
+  desc "Runs unit tests"
   lane :test do
     gradle(task: "test")
   end
 
-  desc "Deploy to Google Play"
-  lane :deploy do
-    gradle(task: "clean assembleRelease")
-    # upload_to_play_store
+  desc "Build release"
+  lane :release do
+    gradle(task: "clean assemble", build_type: "Release")
+    #upload_to_play_store
   end
 end

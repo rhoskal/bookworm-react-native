@@ -12,14 +12,15 @@ blocks:
       jobs:
       - name: Release 🚀
         commands:
-          - export ANDROID_HOME=/dev/null
-          - checkout
-          - nvm use
-          - sem-version ruby 2.6.4
-          - cache restore
-          - yarn jetify
-          - cd android && gem install bundler && bundle update && bundle install
-          - bundle exec fastlane release
+          # - checkout
+          # - nvm use
+          # - sem-version ruby 2.6.4
+          # - cache restore
+          # - yarn jetify
+          - apt install android-sdk
+          - find / -iname "android-sdk" 2>/dev/null
+          # - cd android && gem install bundler && bundle update && bundle install
+          # - bundle exec fastlane release
 
 # blocks:
 #   - name: "Install dependencies"

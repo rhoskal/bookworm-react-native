@@ -18,7 +18,9 @@ blocks:
           # - cache restore
           # - yarn jetify
           - sudo apt install -y android-sdk
-          - sudo find / -iname "android-sdk" 2>/dev/null
+          - echo $ANDROID_HOME
+          - export ANDROID_HOME=/usr/lib/android-sdk
+          - echo $ANDROID_HOME
           # - cd android && gem install bundler && bundle update && bundle install
           # - bundle exec fastlane release
 

@@ -96,16 +96,18 @@ const AppNavigator = createDrawerNavigator(
     Books: {
       screen: BookStack,
       navigationOptions: () => ({
-        drawerIcon: ({ focused }: DrawerIconProps) => (
-          <Image
-            source={Icons.book}
-            style={{
-              width: 22,
-              height: 22,
-              tintColor: focused ? Colors.iconSelected : Colors.iconDefault,
-            }}
-          />
-        ),
+        drawerIcon: function DrawerBookIcon({ focused }: DrawerIconProps) {
+          return (
+            <Image
+              source={Icons.book}
+              style={{
+                width: 22,
+                height: 22,
+                tintColor: focused ? Colors.iconSelected : Colors.iconDefault,
+              }}
+            />
+          );
+        },
       }),
     },
   },

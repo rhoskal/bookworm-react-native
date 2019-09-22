@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[routes] book_detail should match snapshot 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text>
+      Network error: No more mocked responses for the query: query bookDetail($id: ID!) {
+  book(id: $id) {
+    id
+    authors
+    description
+    rating
+    thumbnail
+    title
+  }
+}
+, variables: {}
+    </Text>
+  </View>
+</View>
+`;

@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[routes] book_list should match snapshot 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "flex": 1,
+        }
+      }
+    >
+      <ScrollView
+        columnWrapperStyle={
+          Object {
+            "justifyContent": "space-evenly",
+          }
+        }
+        contentContainerStyle={
+          Object {
+            "paddingTop": 100,
+          }
+        }
+        data={
+          Array [
+            Object {
+              "authors": "Ayn Rand",
+              "id": "1",
+              "rating": 3,
+              "thumbnail": "https://images-na.ssl-image.jpg",
+              "title": "Atlas Shrugged",
+            },
+          ]
+        }
+        disableVirtualization={false}
+        horizontal={false}
+        initialNumToRender={6}
+        maxToRenderPerBatch={10}
+        numColumns={2}
+        onEndReachedThreshold={2}
+        removeClippedSubviews={false}
+        scrollEventThrottle={50}
+        stickyHeaderIndices={Array []}
+        updateCellsBatchingPeriod={50}
+        viewabilityConfigCallbackPairs={Array []}
+        windowSize={21}
+      >
+        <View
+          style={null}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "flexDirection": "row",
+                },
+                Object {
+                  "justifyContent": "space-evenly",
+                },
+              ]
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+              style={
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderRadius": 8,
+                  "height": 200,
+                  "marginBottom": 100,
+                  "padding": 15,
+                  "position": "relative",
+                  "shadowColor": "#000",
+                  "shadowOffset": Object {
+                    "height": 7,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.1,
+                  "shadowRadius": 8,
+                  "width": 352.5,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Image
+                  defaultSource={
+                    Object {
+                      "testUri": "../../../assets/images/placeholder.png",
+                    }
+                  }
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "uri": "https://images-na.ssl-image.jpg",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 15,
+                      "height": 200,
+                      "overflow": "hidden",
+                      "position": "absolute",
+                      "top": -100,
+                      "width": 100,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "paddingTop": 90,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Lato-Bold",
+                      "fontSize": 18,
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  Atlas Shrugged
+                </Text>
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Object {
+                      "color": "#b4b4b4",
+                      "fontFamily": "Lato-Light",
+                      "fontSize": 14,
+                      "marginBottom": 10,
+                    }
+                  }
+                >
+                  Ayn Rand
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/star.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 18,
+                      "marginLeft": 0,
+                      "tintColor": "#f4ca67",
+                      "width": 18,
+                    }
+                  }
+                />
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/star.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 18,
+                      "marginLeft": 1.5,
+                      "tintColor": "#f4ca67",
+                      "width": 18,
+                    }
+                  }
+                />
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/star.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 18,
+                      "marginLeft": 1.5,
+                      "tintColor": "#f4ca67",
+                      "width": 18,
+                    }
+                  }
+                />
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/star.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 18,
+                      "marginLeft": 1.5,
+                      "tintColor": "#dbdbdb",
+                      "width": 18,
+                    }
+                  }
+                />
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/star.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 18,
+                      "marginLeft": 1.5,
+                      "tintColor": "#dbdbdb",
+                      "width": 18,
+                    }
+                  }
+                />
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </ScrollView>
+    </View>
+  </View>
+</View>
+`;

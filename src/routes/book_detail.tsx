@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     position: "relative",
     ...Platform.select({
       android: {
-        elevation: 5,
+        elevation: 2,
       },
       ios: {
         shadowColor: Colors.shadow,

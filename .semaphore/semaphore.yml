@@ -6,37 +6,53 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: "Install dependencies"
+  - name: "Build for Android"
     dependencies: []
     task:
+      env_vars:
+        - name: ANDROID_HOME
+          value: /home/semaphore/android-sdk
       jobs:
-        - name: yarn
-          commands:
-            - checkout
-            - nvm use
-            - yarn install
-            - cache store
-
-  - name: "Static analysis"
-    dependencies: ["Install dependencies"]
-    task:
-      prologue:
+      - name: Release 🚀
         commands:
+          - wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+          - unzip -q sdk-tools-linux-4333796.zip -d android-sdk
+          - yes | android_sdk/tools/bin/sdkmanager --licenses
+          - yes | android_sdk/tools/bin/sdkmanager --update
           - checkout
           - nvm use
+          - sem-version ruby 2.6.4
           - cache restore
-      secrets:
-        - name: bookworm-react-native
-      jobs:
-        - name: unit tests
-          commands:
-            - yarn test:ci
-            - bash <(curl -s https://codecov.io/bash)
+          - yarn jetify
+          - cd android
+          - gem install bundler
+          - bundle update && bundle install --quiet
+          - bundle exec fastlane release
 
-promotions:
-  - name: "Android Build"
-    pipeline_file: build-android.yml
-    auto_promote_on:
-      - result: passed
-        branch:
-          - master
+# blocks:
+#   - name: "Install dependencies"
+#     dependencies: []
+#     task:
+#       jobs:
+#         - name: yarn
+#           commands:
+#             - checkout
+#             - nvm use
+#             - yarn install
+#             - cache store
+#
+#   - name: "Static analysis"
+#     dependencies: ["Install dependencies"]
+#     task:
+#       prologue:
+#         commands:
+#           - checkout
+#           - nvm use
+#           - cache restore
+#       secrets:
+#         - name: bookworm-react-native
+#       jobs:
+#         - name: unit tests
+#           commands:
+#             - yarn test:ci
+#             - bash <(curl -s https://codecov.io/bash)

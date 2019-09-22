@@ -9,6 +9,9 @@ blocks:
   - name: "Build for Android"
     dependencies: []
     task:
+      env_vars:
+        - name: ANDROID_HOME
+          value: /home/android-sdk
       jobs:
       - name: Release 🚀
         commands:

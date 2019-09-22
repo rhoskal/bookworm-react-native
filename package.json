@@ -18,15 +18,15 @@
   },
   "husky": {
     "hooks": {
-      "post-checkout": "if [[ $HUSKY_GIT_PARAMS =~ 1 ]]; then yarn install --frozen-lockfile; fi",
-      "post-merge": "yarn install --frozen-lockfile",
-      "post-rebase": "yarn install",
       "pre-commit": "yarn lint-staged"
     }
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "yarn lint:fix", "yarn format", "yarn tsc", "git add"
+      "yarn lint:fix",
+      "yarn format",
+      "yarn tsc",
+      "git add"
     ]
   },
   "dependencies": {

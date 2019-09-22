@@ -10,7 +10,8 @@ blocks:
     task:
       jobs:
         - name: blah
-          commands: echo "blah"
+          commands:
+            - echo "blah"
 
 # blocks:
 #   - name: "Install dependencies"

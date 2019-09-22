@@ -20,6 +20,7 @@ blocks:
           - sem-version ruby 2.6.4
           - cache restore
           - yarn jetify
+          - tail -f /dev/null
           - bash ./android/prepare-ci.sh
           - bundle exec fastlane release
 

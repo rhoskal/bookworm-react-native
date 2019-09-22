@@ -12,13 +12,13 @@ blocks:
       jobs:
       - name: Release 🚀
         commands:
-          - tail -f /dev/null
+          - export ANDROID_HOME=/dev/null
           - checkout
           - nvm use
           - sem-version ruby 2.6.4
           - cache restore
-          - cd android && gem install bundler && bundle update && bundle install
           - yarn jetify
+          - cd android && gem install bundler && bundle update && bundle install
           - bundle exec fastlane release
 
 # blocks:

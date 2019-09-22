@@ -9,7 +9,7 @@ env | grep ANDROID
 echo $PATH
 
 printf "[+] Installing Android SDK...\n"
-cd /home
+cd ~
 wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 unzip sdk-tools-linux-4333796.zip -d android_sdk
 

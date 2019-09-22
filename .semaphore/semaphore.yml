@@ -11,7 +11,7 @@ blocks:
     task:
       env_vars:
         - name: ANDROID_HOME
-          value: /home/android-sdk
+          value: /home/semaphore/android-sdk
       jobs:
       - name: Release 🚀
         commands:

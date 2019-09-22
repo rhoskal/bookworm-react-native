@@ -16,8 +16,14 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Deploy to App Store"
-  lane :deploy do
-    gym
+  desc "Run unit tests"
+  lane :tests do
+    run_tests(scheme: "bookwormTests")
+  end
+
+  desc "Build release"
+  lane :release do
+    build_ios_app(scheme: "bookworm")
+    #upload_to_app_store
   end
 end

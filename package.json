@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "build:android": "cd android && bundle exec fastlane deploy",
+    "build:ios": "cd ios && bundle exec fastlane deploy",
     "codegen": "graphql-codegen --config codegen.yml",
+    "compile": "tsc",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
@@ -12,8 +15,7 @@
     "schema": "graphql get-schema && yarn run codegen",
     "start": "react-native start",
     "test": "jest",
-    "test:ci": "jest --ci --coverage",
-    "typecheck": "tsc"
+    "test:ci": "jest --ci --coverage"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.0",

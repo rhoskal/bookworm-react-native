@@ -14,6 +14,7 @@ blocks:
       - name: Release 🚀
         commands:
           - checkout
-          - nvm use
-          - cache restore
-          - yarn build:android
+          - ruby --version
+          # - fastlane --version
+          - cd android && gem install
+          - bundle exec fastlane release

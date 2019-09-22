@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build:android": "cd android && bundle exec fastlane deploy",
-    "build:ios": "cd ios && bundle exec fastlane deploy",
+    "build:android": "cd android && bundle exec fastlane release",
+    "build:ios": "cd ios && bundle exec fastlane release",
     "codegen": "graphql-codegen --config codegen.yml",
-    "compile": "tsc",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
@@ -19,13 +18,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn run compile"
+      "pre-commit": "yarn lint-staged"
     }
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "yarn run format", "yarn run lint:fix", "git add"
+      "yarn lint:fix",
+      "yarn format",
+      "yarn tsc",
+      "git add"
     ]
   },
   "dependencies": {

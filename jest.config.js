@@ -11,15 +11,15 @@ module.exports = {
   coverageDirectory: "<rootDir>/coverage",
   coverageThreshold: {
     global: {
-      branches: 60,
-      functions: 60,
-      lines: 60,
-      statements: 60,
+      branches: 70,
+      functions: 75,
+      lines: 75,
+      statements: 75,
     },
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
   preset: "@testing-library/react-native",
-  setupFiles: ["./jest_setup.js"],
+  setupFiles: ["@testing-library/jest-native"],
   setupFilesAfterEnv: ["@testing-library/react-native/cleanup-after-each"],
   transform: {
     "^.+\\.tsx?$": "babel-jest",

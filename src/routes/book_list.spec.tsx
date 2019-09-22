@@ -10,7 +10,7 @@ describe("[routes] book_list", function() {
 
   it("should handle loading state", function() {
     const { getByText } = render(
-      <MockedProvider mocks={[]}>
+      <MockedProvider mocks={[]} addTypename={false}>
         <BookList />
       </MockedProvider>,
     );
@@ -29,17 +29,15 @@ describe("[routes] book_list", function() {
     };
 
     const { getByText } = render(
-      <MockedProvider mocks={[mockedRequest]}>
+      <MockedProvider mocks={[mockedRequest]} addTypename={false}>
         <BookList />
       </MockedProvider>,
     );
 
-    await waitForElement(function() {
-      return getByText("GraphQL error: Custom error!");
-    });
+    await waitForElement(() => getByText("GraphQL error: Custom error!"));
   });
 
-  it.skip("should match snapshot", async function() {
+  it("should match snapshot", async function() {
     mockedRequest = {
       request: {
         query: BOOKS_QUERY,
@@ -59,7 +57,6 @@ describe("[routes] book_list", function() {
               rating: 3,
               thumbnail: "https://images-na.ssl-image.jpg",
               title: "Atlas Shrugged",
-              __typename: "Book",
             },
           ],
         },
@@ -67,13 +64,11 @@ describe("[routes] book_list", function() {
     };
 
     const { baseElement } = render(
-      <MockedProvider mocks={[mockedRequest]} addTypename>
+      <MockedProvider mocks={[mockedRequest]} addTypename={false}>
         <BookList />
       </MockedProvider>,
     );
 
-    await wait(function() {
-      expect(baseElement).toMatchSnapshot();
-    });
+    await wait(() => expect(baseElement).toMatchSnapshot());
   });
 });

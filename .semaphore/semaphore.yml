@@ -9,9 +9,6 @@ blocks:
   - name: "Build for Android"
     dependencies: []
     task:
-      env_vars:
-        - name: ANDROID_HOME
-          value: /usr/lib/android-sdk
       jobs:
       - name: Release 🚀
         commands:
@@ -20,7 +17,7 @@ blocks:
           - sem-version ruby 2.6.4
           - cache restore
           - yarn jetify
-          - bash ./android/prepare.sh
+          - bash ./android/prepare-ci.sh
           - bundle exec fastlane release
 
 # blocks:

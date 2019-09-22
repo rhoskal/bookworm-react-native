@@ -14,7 +14,7 @@ blocks:
         commands:
           - checkout
           - ruby --version
-          - cd android && gem install
+          - cd android && bundle install
           - bundle exec fastlane release
 
 # blocks:

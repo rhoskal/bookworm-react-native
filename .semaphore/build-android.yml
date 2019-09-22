@@ -11,7 +11,9 @@ blocks:
   - name: "Build for Android"
     task:
       jobs:
-      - name: 🚀Release
+      - name: Release 🚀
         commands:
           - checkout
+          - nvm use
+          - cache restore
           - yarn build:android

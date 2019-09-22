@@ -15,14 +15,16 @@ blocks:
       jobs:
       - name: Release 🚀
         commands:
-          - checkout
-          - nvm use
-          - sem-version ruby 2.6.4
-          - cache restore
-          - yarn jetify
-          - tail -f /dev/null
-          - bash ./android/prepare-ci.sh
-          - bundle exec fastlane release
+          - wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+          - unzip -q sdk-tools-linux-4333796.zip -d android_sdk
+          - yes | sdkmanager --licenses && yes | sdkmanager --update || exit 1
+          # - checkout
+          # - nvm use
+          # - sem-version ruby 2.6.4
+          # - cache restore
+          # - yarn jetify
+          # - bash ./android/prepare-ci.sh
+          # - bundle exec fastlane release
 
 # blocks:
 #   - name: "Install dependencies"

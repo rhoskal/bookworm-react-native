@@ -9,20 +9,20 @@ blocks:
   - name: "Build for Android"
     dependencies: []
     task:
+      env_vars:
+        - name: ANDROID_HOME
+          value: /usr/lib/android-sdk
       jobs:
       - name: Release 🚀
         commands:
-          # - checkout
-          # - nvm use
-          # - sem-version ruby 2.6.4
-          # - cache restore
-          # - yarn jetify
+          - checkout
+          - nvm use
+          - sem-version ruby 2.6.4
+          - cache restore
+          - yarn jetify
           - sudo apt install -y android-sdk
-          - echo $ANDROID_HOME
-          - export ANDROID_HOME=/usr/lib/android-sdk
-          - echo $ANDROID_HOME
-          # - cd android && gem install bundler && bundle update && bundle install
-          # - bundle exec fastlane release
+          - cd android && gem install bundler && bundle update && bundle install
+          - bundle exec fastlane release
 
 # blocks:
 #   - name: "Install dependencies"

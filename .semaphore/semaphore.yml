@@ -15,7 +15,7 @@ blocks:
           - checkout
           - sem-version ruby 2.6.4
           - ruby --version
-          - cd android && gem install bundler && bundle install
+          - cd android && bundle update && bundle install
           - bundle exec fastlane release
 
 # blocks:

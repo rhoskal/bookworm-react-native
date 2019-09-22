@@ -20,9 +20,7 @@ blocks:
           - sem-version ruby 2.6.4
           - cache restore
           - yarn jetify
-          - sudo apt install -y android-sdk
-          - cd android && gem install bundler && bundle update && bundle install
-          - bundle exec fastlane release
+          - ./semaphore/android-build.sh
 
 # blocks:
 #   - name: "Install dependencies"

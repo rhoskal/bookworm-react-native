@@ -6,7 +6,6 @@
     "build:android": "cd android && bundle exec fastlane deploy",
     "build:ios": "cd ios && bundle exec fastlane deploy",
     "codegen": "graphql-codegen --config codegen.yml",
-    "compile": "tsc",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
@@ -19,13 +18,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn run compile"
+      "post-checkout": "if [[ $HUSKY_GIT_PARAMS =~ 1 ]]; then yarn install --frozen-lockfile; fi",
+      "post-merge": "yarn install --frozen-lockfile",
+      "post-rebase": "yarn install",
+      "pre-commit": "yarn tsc && yarn lint-staged"
     }
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "yarn run format", "yarn run lint:fix", "git add"
+      "yarn lint:fix", "yarn format", "git add"
     ]
   },
   "dependencies": {

@@ -8,10 +8,16 @@ import { BookList, BOOKS_QUERY } from "./book_list";
 describe("[routes] book_list", function() {
   let mockedRequest;
 
+  const withNav: any = {
+    navigation: {
+      navigate: jest.fn(),
+    },
+  };
+
   it("should handle loading state", function() {
     const { getByText } = render(
       <MockedProvider mocks={[]} addTypename={false}>
-        <BookList />
+        <BookList {...withNav} />
       </MockedProvider>,
     );
 
@@ -30,7 +36,7 @@ describe("[routes] book_list", function() {
 
     const { getByText } = render(
       <MockedProvider mocks={[mockedRequest]} addTypename={false}>
-        <BookList />
+        <BookList {...withNav} />
       </MockedProvider>,
     );
 
@@ -65,7 +71,7 @@ describe("[routes] book_list", function() {
 
     const { baseElement } = render(
       <MockedProvider mocks={[mockedRequest]} addTypename={false}>
-        <BookList />
+        <BookList {...withNav} />
       </MockedProvider>,
     );
 

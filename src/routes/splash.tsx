@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   displayName: {
-    color: "white",
+    color: Colors.white,
     fontFamily: "Lato-Bold",
     fontSize: 30,
     fontWeight: "bold",

@@ -45,7 +45,7 @@ exports[`[routes] splash should match snapshot 1`] = `
       <Text
         style={
           Object {
-            "color": "white",
+            "color": "#fff",
             "fontFamily": "Lato-Bold",
             "fontSize": 30,
             "fontWeight": "bold",

@@ -6,24 +6,25 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  prologue:
-    commands:
-      - checkout
-      - nvm use
-      - cache restore
-
   - name: "Install dependencies"
     dependencies: []
     task:
       jobs:
         - name: yarn
           commands:
+            - checkout
+            - nvm use
             - yarn install
             - cache store
 
   - name: "Static analysis"
     dependencies: ["Install dependencies"]
     task:
+      prologue:
+        commands:
+          - checkout
+          - nvm use
+          - cache restore
       secrets:
         - name: bookworm-react-native
       jobs:

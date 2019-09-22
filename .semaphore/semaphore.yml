@@ -6,12 +6,17 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: "Dummy"
+  - name: "Build for Android"
+    dependencies: []
     task:
       jobs:
-        - name: blah
-          commands:
-            - echo "blah"
+      - name: Release 🚀
+        commands:
+          - checkout
+          - ruby --version
+          - fastlane --version
+          - cd android && gem install
+          - bundle exec fastlane release
 
 # blocks:
 #   - name: "Install dependencies"
@@ -40,9 +45,3 @@ blocks:
 #           commands:
 #             - yarn test:ci
 #             - bash <(curl -s https://codecov.io/bash)
-
-promotions:
-  - name: "Android Build"
-    pipeline_file: build-android.yml
-    auto_promote_on:
-      - result: passed

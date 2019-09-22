@@ -14,5 +14,7 @@ blocks:
       - name: Release 🚀
         commands:
           - checkout
-          - tail -f /dev/null
-          # - cd android && bundle exec fastlane release
+          - fastlane --version
+          - ruby --version
+          - cd android && gem install
+          - bundle exec fastlane release

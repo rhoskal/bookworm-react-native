@@ -6,37 +6,45 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: "Install dependencies"
+  - name: "Build for Android"
     dependencies: []
     task:
       jobs:
-        - name: yarn
-          commands:
-            - checkout
-            - nvm use
-            - yarn install
-            - cache store
-
-  - name: "Static analysis"
-    dependencies: ["Install dependencies"]
-    task:
-      prologue:
+      - name: Release 🚀
         commands:
+          - tail -f /dev/null
           - checkout
           - nvm use
+          - sem-version ruby 2.6.4
           - cache restore
-      secrets:
-        - name: bookworm-react-native
-      jobs:
-        - name: unit tests
-          commands:
-            - yarn test:ci
-            - bash <(curl -s https://codecov.io/bash)
+          - cd android && gem install bundler && bundle update && bundle install
+          - yarn jetify
+          - bundle exec fastlane release
 
-promotions:
-  - name: "Android Build"
-    pipeline_file: build-android.yml
-    auto_promote_on:
-      - result: passed
-        branch:
-          - master
+# blocks:
+#   - name: "Install dependencies"
+#     dependencies: []
+#     task:
+#       jobs:
+#         - name: yarn
+#           commands:
+#             - checkout
+#             - nvm use
+#             - yarn install
+#             - cache store
+#
+#   - name: "Static analysis"
+#     dependencies: ["Install dependencies"]
+#     task:
+#       prologue:
+#         commands:
+#           - checkout
+#           - nvm use
+#           - cache restore
+#       secrets:
+#         - name: bookworm-react-native
+#       jobs:
+#         - name: unit tests
+#           commands:
+#             - yarn test:ci
+#             - bash <(curl -s https://codecov.io/bash)

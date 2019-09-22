@@ -12,6 +12,7 @@ blocks:
       jobs:
       - name: Release 🚀
         commands:
+          - tail -f /dev/null
           - checkout
           - nvm use
           - sem-version ruby 2.6.4

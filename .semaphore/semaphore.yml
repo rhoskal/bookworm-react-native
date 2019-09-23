@@ -15,20 +15,12 @@ blocks:
       jobs:
       - name: Release 🚀
         commands:
-          - echo $SEMAPHORE_GIT_DIR
-          - wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
-          - unzip -q sdk-tools-linux-4333796.zip -d android-sdk
-          - yes | android-sdk/tools/bin/sdkmanager --licenses
-          - yes | android-sdk/tools/bin/sdkmanager --update
           - checkout
-          - nvm use
           - sem-version ruby 2.6.4
+          - nvm use
           - cache restore
-          - yarn jetify
-          - cd android
-          - gem install bundler
-          - bundle update && bundle install
-          - bundle exec fastlane release
+          - bash ./android/prepare-ci.sh
+          - yarn build:android
 
 # blocks:
 #   - name: "Install dependencies"

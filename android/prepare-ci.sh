@@ -9,6 +9,7 @@ export ANDROID_HOME=$HOME/android-sdk
 
 printf "[+] Installing Fastlane...\n"
 cd ~/$SEMAPHORE_GIT_DIR/android
+ls -al ../
 gem install bundler
 bundle update && bundle install
 

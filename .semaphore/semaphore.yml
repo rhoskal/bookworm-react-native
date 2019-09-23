@@ -13,11 +13,12 @@ blocks:
       - name: Release 🚀
         commands:
           - checkout
-          - sem-version ruby 2.6.4
-          - nvm use
-          - cache restore
-          - yarn jetify
-          - bash ./android/prepare-ci.sh
+          - ls -al src
+          # - sem-version ruby 2.6.4
+          # - nvm use
+          # - cache restore
+          # - yarn jetify
+          # - bash ./android/prepare-ci.sh
 
 # blocks:
 #   - name: "Install dependencies"

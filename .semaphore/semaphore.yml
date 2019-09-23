@@ -19,8 +19,8 @@ blocks:
           - sem-version ruby 2.6.4
           - nvm use
           - cache restore
+          - yarn jetify
           - bash ./android/prepare-ci.sh
-          - yarn build:android
 
 # blocks:
 #   - name: "Install dependencies"

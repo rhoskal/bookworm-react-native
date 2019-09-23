@@ -9,3 +9,6 @@ printf "[+] Installing Fastlane...\n"
 cd ~/$SEMAPHORE_GIT_DIR/android
 gem install bundler
 bundle update && bundle install
+
+printf "[+] Building release...\n"
+bundle exec fastlane release

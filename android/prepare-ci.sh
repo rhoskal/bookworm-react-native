@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 printf "[+] Installing Android SDK...\n"
+cd ~
 wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 unzip -q sdk-tools-linux-4333796.zip -d android-sdk
 yes | android-sdk/tools/bin/sdkmanager --licenses

@@ -17,7 +17,7 @@ Project highlights:
   * Custom fonts & splash screen
   * `Apollo GraphQL` Client
   * Unit testing with `@testing-library/react-native`
-  * CI & CD using `SemaphoreCI`
+  * CI & CD using `GitHub Actions`
 
 ## License
 MIT

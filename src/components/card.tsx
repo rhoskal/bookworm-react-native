@@ -24,12 +24,13 @@ export function Card({ book, onPress }: Props) {
       <View style={styles.thumbnailContainer}>
         <Image
           defaultSource={Images.placeholder}
-          resizeMode="contain"
-          source={{ uri: book.thumbnail ? book.thumbnail : Images.placeholder }}
+          resizeMode="cover"
+          source={{ uri: book.thumbnail }}
           style={styles.thumbnail}
+          testID="book-thumbnail"
         />
       </View>
-      <View style={styles.infoContainer}>
+      <View>
         <Text style={styles.bookTitleText} numberOfLines={1}>
           {book.title}
         </Text>
@@ -44,24 +45,22 @@ export function Card({ book, onPress }: Props) {
 
 const styles = StyleSheet.create({
   bookAuthorText: {
-    color: Colors.textLight,
+    color: Colors.text_light,
     fontFamily: "Lato-Light",
     fontSize: 14,
     marginBottom: Layout.margin_sm,
   },
   bookTitleText: {
-    color: Colors.textDark,
+    color: Colors.text_dark,
     fontFamily: "Lato-Bold",
     fontSize: 18,
     marginBottom: Layout.margin_sm,
   },
   card: {
     backgroundColor: Colors.white,
-    borderRadius: Layout.cardRadius,
-    height: 200,
-    marginBottom: 100,
+    borderRadius: Layout.card_radius,
+    marginBottom: Layout.margin_xl,
     padding: Layout.margin_md,
-    position: "relative",
     width: (Layout.screen.width - Layout.margin_md * 3) / 2,
     ...Platform.select({
       android: {
@@ -74,22 +73,19 @@ const styles = StyleSheet.create({
           width: 0,
         },
         shadowOpacity: 0.1,
-        shadowRadius: Layout.cardRadius,
+        shadowRadius: Layout.card_radius,
       },
     }),
   },
-  infoContainer: {
-    paddingTop: 90,
-  },
   thumbnail: {
-    borderRadius: 15,
-    height: 200,
-    overflow: "hidden",
-    position: "absolute",
-    top: -100,
-    width: 100,
+    borderRadius: 10,
+    height: "100%",
+    width: "100%",
   },
   thumbnailContainer: {
-    alignItems: "center",
+    alignSelf: "center",
+    height: 175,
+    paddingBottom: Layout.margin_sm,
+    width: 115,
   },
 });

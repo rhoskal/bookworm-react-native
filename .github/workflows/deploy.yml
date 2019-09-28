@@ -1,13 +1,12 @@
-name: Continuous Integration
+name: Continuous Deployment
 
 on:
-  pull_request:
-  push:
+  merge:
     branches:
       - master
 
 jobs:
-  test-coverage:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:

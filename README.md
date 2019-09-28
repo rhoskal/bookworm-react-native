@@ -8,6 +8,7 @@
 [![codecov](https://codecov.io/gh/hansjhoffman/bookworm-react-native/branch/master/graph/badge.svg?token=OoCBFhQFCs)](https://codecov.io/gh/hansjhoffman/bookworm-react-native)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![jest](https://facebook.github.io/jest/img/jest-badge.svg)](https://github.com/facebook/jest)
+[![Strict TypeScript Checked](https://badgen.net/badge/TS/Strict "Strict TypeScript Checked")](https://www.typescriptlang.org)
 
 Project highlights:
   * Built with `React Native`

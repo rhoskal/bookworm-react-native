@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
     height: 23,
     marginLeft: Layout.margin_lg,
     resizeMode: "contain",
-    tintColor: Colors.iconSelected,
+    tintColor: Colors.icon_selected,
   },
 });

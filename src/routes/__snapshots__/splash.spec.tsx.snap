@@ -27,6 +27,7 @@ exports[`[routes] splash should match snapshot 1`] = `
           "justifyContent": "center",
         }
       }
+      testID="splash"
     >
       <Image
         resizeMode="contain"
@@ -45,7 +46,7 @@ exports[`[routes] splash should match snapshot 1`] = `
       <Text
         style={
           Object {
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Lato-Bold",
             "fontSize": 30,
             "fontWeight": "bold",

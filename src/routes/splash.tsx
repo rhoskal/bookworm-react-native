@@ -15,7 +15,7 @@ export function Splash() {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="splash">
       <Image resizeMode="contain" source={Images.logo} style={styles.logo} />
       <Text style={styles.displayName}>{displayName}</Text>
     </View>

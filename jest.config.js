@@ -19,8 +19,8 @@ module.exports = {
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
   preset: "@testing-library/react-native",
-  setupFiles: ["@testing-library/jest-native"],
-  setupFilesAfterEnv: ["@testing-library/react-native/cleanup-after-each"],
+  setupFiles: ["jest-fetch-mock"],
+  setupFilesAfterEnv: ["./jest_setup.ts"],
   transform: {
     "^.+\\.tsx?$": "babel-jest",
   },

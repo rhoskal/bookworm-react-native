@@ -1,13 +1,12 @@
-name: Continuous Integration
+name: Continuous Deployment
 
 on:
-  pull_request:
   push:
     branches:
       - master
 
 jobs:
-  test-coverage:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +18,13 @@ jobs:
           version: "10.16.2"
 
       - name: Install packages
-        run: yarn install
+        run: |
+          yarn install
+          yarn jetify
 
       - name: Build apk
-        run: yarn build:android
+        run: |
+          cd android
+          gem install bundler
+          bundle update && bundle install
+          bundle exec fastlane release

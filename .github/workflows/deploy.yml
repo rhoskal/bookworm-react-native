@@ -1,13 +1,12 @@
-name: Continuous Integration
+name: Continuous Deployment
 
 on:
-  pull_request:
   push:
     branches:
       - master
 
 jobs:
-  test-coverage:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,11 +21,6 @@ jobs:
         run: |
           yarn install
           yarn jetify
-
-      - name: Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
-        with:
-          version: 2.6.x
 
       - name: Build apk
         run: |

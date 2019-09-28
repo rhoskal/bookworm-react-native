@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  static-analysis:
+  test-coverage:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,6 +25,6 @@ jobs:
         run: yarn test:ci
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1.0.2
-        with:
-          token: ${{ secrets.codecov_token }}
+        run: bash <(curl -s https://codecov.io/bash)
+        env:
+          CODECOV_TOKEN: ${{ secrets.codecov_token }}

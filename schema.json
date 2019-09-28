@@ -141,9 +141,13 @@
               "description": "The uri for a thumbnail",
               "args": [],
               "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -1054,7 +1058,7 @@
   "extensions": {
     "graphql-config": {
       "source": "https://bookworm.hansjhoffman.dev/graphql",
-      "timestamp": "Wed Sep 11 2019 20:35:05 GMT-0400 (Eastern Daylight Time)"
+      "timestamp": "Sat Sep 28 2019 11:17:45 GMT-0400 (Eastern Daylight Time)"
     }
   }
 }

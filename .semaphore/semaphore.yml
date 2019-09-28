@@ -32,11 +32,16 @@ blocks:
           commands:
             - yarn test:ci
             - bash <(curl -s https://codecov.io/bash)
-
-promotions:
-  - name: "Android Build"
-    pipeline_file: build-android.yml
-    auto_promote_on:
-      - result: passed
-        branch:
-          - master
+            
+  - name: "Build for Android"
+    dependencies: ["Static analysis"]
+    task:
+      jobs:
+      - name: Release 🚀
+        commands:
+          - checkout
+          - sem-version ruby 2.6.4
+          - nvm use
+          - cache restore
+          - yarn jetify
+          - bash ./android/prepare-ci.sh

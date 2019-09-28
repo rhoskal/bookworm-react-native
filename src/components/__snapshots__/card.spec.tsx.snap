@@ -22,13 +22,11 @@ exports[`[component] Card should match snapshot 1`] = `
       activeOpacity={0.2}
       style={
         Object {
-          "backgroundColor": "#fff",
+          "backgroundColor": "#ffffff",
           "borderRadius": 8,
-          "height": 200,
-          "marginBottom": 100,
+          "marginBottom": 30,
           "padding": 15,
-          "position": "relative",
-          "shadowColor": "#000",
+          "shadowColor": "#000000",
           "shadowOffset": Object {
             "height": 7,
             "width": 0,
@@ -42,7 +40,10 @@ exports[`[component] Card should match snapshot 1`] = `
       <View
         style={
           Object {
-            "alignItems": "center",
+            "alignSelf": "center",
+            "height": 175,
+            "paddingBottom": 10,
+            "width": 115,
           }
         }
       >
@@ -52,7 +53,7 @@ exports[`[component] Card should match snapshot 1`] = `
               "testUri": "../../../assets/images/placeholder.png",
             }
           }
-          resizeMode="contain"
+          resizeMode="cover"
           source={
             Object {
               "uri": "https://thumbnail.jpg",
@@ -60,23 +61,15 @@ exports[`[component] Card should match snapshot 1`] = `
           }
           style={
             Object {
-              "borderRadius": 15,
-              "height": 200,
-              "overflow": "hidden",
-              "position": "absolute",
-              "top": -100,
-              "width": 100,
+              "borderRadius": 10,
+              "height": "100%",
+              "width": "100%",
             }
           }
+          testID="book-thumbnail"
         />
       </View>
-      <View
-        style={
-          Object {
-            "paddingTop": 90,
-          }
-        }
-      >
+      <View>
         <Text
           numberOfLines={1}
           style={

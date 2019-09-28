@@ -18,19 +18,181 @@ exports[`[routes] book_detail should match snapshot 1`] = `
       }
     }
   >
-    <Text>
-      Network error: No more mocked responses for the query: query bookDetail($id: ID!) {
-  book(id: $id) {
-    id
-    authors
-    description
-    rating
-    thumbnail
-    title
-  }
-}
-, variables: {}
-    </Text>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+          "flex": 1,
+          "paddingTop": 20,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderRadius": 8,
+            "marginHorizontal": 30,
+            "padding": 20,
+            "shadowColor": "#000000",
+            "shadowOffset": Object {
+              "height": 7,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 8,
+          }
+        }
+      >
+        <Image
+          defaultSource={
+            Object {
+              "testUri": "../../../assets/images/placeholder.png",
+            }
+          }
+          resizeMode="contain"
+          source={
+            Object {
+              "uri": "https://images-na.ssl-image.jpg",
+            }
+          }
+          style={
+            Object {
+              "borderRadius": 15,
+              "height": 300,
+              "width": 200,
+            }
+          }
+        />
+        <View>
+          <Text
+            numberOfLines={2}
+            style={
+              Object {
+                "color": "#333333",
+                "fontFamily": "Lato-Bold",
+                "fontSize": 20,
+                "marginVertical": 10,
+              }
+            }
+          >
+            Atlas Shrugged
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "color": "#b4b4b4",
+                "fontFamily": "Lato-Light",
+                "fontSize": 14,
+                "marginBottom": 10,
+              }
+            }
+          >
+            Ayn Rand
+          </Text>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/icons/star.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 18,
+                  "marginLeft": 0,
+                  "tintColor": "#f4ca67",
+                  "width": 18,
+                }
+              }
+            />
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/icons/star.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 18,
+                  "marginLeft": 1.5,
+                  "tintColor": "#f4ca67",
+                  "width": 18,
+                }
+              }
+            />
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/icons/star.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 18,
+                  "marginLeft": 1.5,
+                  "tintColor": "#f4ca67",
+                  "width": 18,
+                }
+              }
+            />
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/icons/star.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 18,
+                  "marginLeft": 1.5,
+                  "tintColor": "#dbdbdb",
+                  "width": 18,
+                }
+              }
+            />
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/icons/star.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 18,
+                  "marginLeft": 1.5,
+                  "tintColor": "#dbdbdb",
+                  "width": 18,
+                }
+              }
+            />
+          </View>
+          <Text
+            numberOfLines={4}
+            style={
+              Object {
+                "color": "#888888",
+                "fontFamily": "Lato-Regular",
+                "fontSize": 16,
+                "lineHeight": 25,
+                "marginTop": 10,
+                "textAlign": "justify",
+              }
+            }
+          >
+            Peopled by larger-than-life heroes and villains, charged with towering questions of good and evil, Atlas Shrugged is Ayn Rand’s magnum opus: a philosophical revolution told in the form of an action thriller—nominated as one of America’s best-loved novels by PBS’s The Great American Read.
+          </Text>
+        </View>
+      </View>
+    </View>
   </View>
 </View>
 `;

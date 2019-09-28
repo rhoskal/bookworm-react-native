@@ -1,0 +1,30 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Node Setup
+        uses: actions/setup-node@master
+        with:
+          version: "10.16.2"
+
+      - name: Install Packages
+        run: yarn install
+
+      - name: Unit Tests
+        run: yarn test:ci
+
+      - name: Upload coverage to Codecov
+        run: bash <(curl -s https://codecov.io/bash)
+        env:
+          CODECOV_TOKEN: ${{ secrets.codecov_token }}

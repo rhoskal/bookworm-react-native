@@ -13,10 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Install Packages
+      - name: Node Setup
         uses: actions/setup-node@master
         with:
           version: "10.16.2"
+
+      - name: Install Packages
         run: yarn install
 
       - name: Unit Tests

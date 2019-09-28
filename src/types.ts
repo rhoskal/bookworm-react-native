@@ -19,7 +19,7 @@ export type Book = {
   /** A random rating between 0 and 5 */
   rating: Scalars['Int'],
   /** The uri for a thumbnail */
-  thumbnail?: Maybe<Scalars['String']>,
+  thumbnail: Scalars['String'],
   /** The title of the book */
   title: Scalars['String'],
 };

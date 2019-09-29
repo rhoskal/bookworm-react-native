@@ -19,7 +19,7 @@ exports[`[component] Error should match snapshot 1`] = `
     }
   >
     <Text>
-      Error :(
+      Ah ah ah, you didn't say the magic word.
     </Text>
   </View>
 </View>

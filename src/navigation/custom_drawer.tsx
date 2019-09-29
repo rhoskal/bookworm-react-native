@@ -14,10 +14,10 @@ export default function CustomDrawerContent(
 ) {
   return (
     <SafeAreaView
-      style={styles.container}
-      forceInset={{ top: "always", horizontal: "never" }}>
+      forceInset={{ top: "always", horizontal: "never" }}
+      style={styles.container}>
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={Images.logo} resizeMode="contain" />
+        <Image resizeMode="contain" source={Images.logo} style={styles.logo} />
       </View>
       <DrawerNavigatorItems {...props} />
     </SafeAreaView>

@@ -13,15 +13,15 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Node Setup
+      - name: Node setup
         uses: actions/setup-node@master
         with:
           version: "10.16.2"
 
-      - name: Install Packages
+      - name: Install packages
         run: yarn install
 
-      - name: Unit Tests
+      - name: Unit tests
         run: yarn test:ci
 
       - name: Upload coverage to Codecov

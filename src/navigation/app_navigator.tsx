@@ -37,6 +37,13 @@ const BookStack = createStackNavigator(
             }),
           },
           headerTitle: "Books",
+          headerTitleContainerStyle: {
+            ...Platform.select({
+              android: {
+                left: Layout.margin_lg,
+              },
+            }),
+          },
           headerTitleStyle: {
             color: Colors.text_dark,
             fontFamily: "Lato-Bold",
@@ -45,13 +52,6 @@ const BookStack = createStackNavigator(
               android: {
                 flex: 1,
                 textAlign: "center",
-              },
-            }),
-          },
-          headerTitleContainerStyle: {
-            ...Platform.select({
-              android: {
-                left: Layout.margin_lg,
               },
             }),
           },
@@ -64,7 +64,7 @@ const BookStack = createStackNavigator(
         return {
           headerBackImage: function customBackImage() {
             return (
-              <Image style={styles.icon_arrow} source={Icons.back_arrow} />
+              <Image source={Icons.back_arrow} style={styles.icon_arrow} />
             );
           },
           headerBackTitle: null,
@@ -126,9 +126,9 @@ const AppNavigator = createDrawerNavigator(
     contentOptions: {
       activeTintColor: Colors.tint_color,
       labelStyle: {
+        color: Colors.secondary,
         fontFamily: "Lato-Regular",
         fontSize: 16,
-        color: Colors.secondary,
       },
     },
   },

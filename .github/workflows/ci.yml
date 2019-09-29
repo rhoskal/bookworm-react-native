@@ -19,18 +19,12 @@ jobs:
           version: "10.16.2"
 
       - name: Install packages
-        run: |
-          yarn install
-          yarn jetify
+        run: yarn install
 
-      - name: Set up Ruby 2.6
-        uses: actions/setup-ruby@v1
-        with:
-          version: 2.6.x
+      - name: Unit tests
+        run: yarn test:ci
 
-      - name: Build apk
-        run: |
-          cd android
-          gem install bundler
-          bundle update && bundle install
-          bundle exec fastlane release
+      - name: Upload coverage to Codecov
+        run: bash <(curl -s https://codecov.io/bash)
+        env:
+          CODECOV_TOKEN: ${{ secrets.codecov_token }}

@@ -22,6 +22,11 @@ jobs:
           yarn install
           yarn jetify
 
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          version: 2.6.x
+
       - name: Build apk
         run: |
           cd android

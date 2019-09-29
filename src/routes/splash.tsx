@@ -24,10 +24,10 @@ export function Splash() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: Colors.primary,
-    justifyContent: "center",
     alignItems: "center",
+    backgroundColor: Colors.primary,
+    flex: 1,
+    justifyContent: "center",
   },
   displayName: {
     color: Colors.white,
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   logo: {
-    width: 90,
     height: 240,
+    width: 90,
   },
 });

@@ -1,0 +1,35 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Node setup
+        uses: actions/setup-node@master
+        with:
+          version: "10.16.2"
+
+      - name: Install packages
+        run: |
+          yarn install
+          yarn jetify
+
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          version: 2.6.x
+
+      - name: Build apk
+        run: |
+          cd android
+          gem install bundler
+          bundle update && bundle install
+          bundle exec fastlane release

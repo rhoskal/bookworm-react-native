@@ -18,12 +18,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint-staged"
+      "pre-commit": "tsc && yarn lint-staged"
     }
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "tsc",
       "yarn lint:fix",
       "yarn format",
       "git add"

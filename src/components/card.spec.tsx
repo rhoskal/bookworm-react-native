@@ -5,6 +5,8 @@ import { Card } from "./card";
 import { Book } from "../types";
 
 describe("[component] Card", function() {
+  const thumbnail: string = "https://thumbnail.jpg";
+
   it("should default to placeholder image if book has no thumbnail", function() {
     const book: Book = {
       id: "1",
@@ -12,13 +14,13 @@ describe("[component] Card", function() {
       description: "This book is one of my top 5!",
       rating: 3,
       title: "Atlas Shrugged",
-      thumbnail: "https://thumbnail.jpg",
+      thumbnail: thumbnail,
     };
 
     const { getByTestId } = render(<Card book={book} />);
 
     expect(getByTestId("book-thumbnail")).toHaveProp("source", {
-      uri: "https://thumbnail.jpg",
+      uri: thumbnail,
     });
   });
 
@@ -28,7 +30,7 @@ describe("[component] Card", function() {
       authors: "Ayn Rand",
       description: "This book is one of my top 5!",
       rating: 3,
-      thumbnail: "https://thumbnail.jpg",
+      thumbnail: thumbnail,
       title: "Atlas Shrugged",
     };
 
